@@ -110,14 +110,14 @@
   .frame.show { animation: pop 1s cubic-bezier(.18,.9,.28,1.2) forwards; }
 
   .note {
-    position: absolute; top: 5.5%; left: 8%; right: 8%; bottom: 49%;
+    position: absolute; top: 13%; left: 8%; right: 8%; bottom: 49%;
     display: flex; flex-direction: column; justify-content: flex-start;
     gap: 2.2cqw; padding: 2cqw 1cqw; text-align: center;
   }
   .panel { display: none; }
   .note p {
-    position: relative; color: #3f3327; line-height: 1.45;
-    font-size: 3.4cqw; min-height: 1px;
+    position: relative; color: #3f3327; line-height: 1.42;
+    font-size: 3.2cqw; min-height: 1px;
     letter-spacing: .2px;
   }
   .note p.typing::after {
@@ -287,20 +287,20 @@
       const marginX = 0.08 * cw;
       const maxW = cw - 2 * marginX;
       const cx = cw / 2;
-      let y = 0.06 * ch;
+      let y = 0.12 * ch;
       ctx.textAlign = 'center';
       ctx.textBaseline = 'top';
 
       // date
-      const dfs = Math.round(0.030 * cw);
+      const dfs = Math.round(0.029 * cw);
       ctx.fillStyle = '#7d6c56';
       ctx.font = dfs + 'px "Chewy", cursive';
       ctx.fillText('9/9/69', cx, y);
       y += dfs * 1.8;
 
       // body
-      const fs = Math.round(0.032 * cw);
-      const lh = Math.round(fs * 1.45);
+      const fs = Math.round(0.030 * cw);
+      const lh = Math.round(fs * 1.42);
       ctx.fillStyle = '#3f3327';
       ctx.font = fs + 'px "Chewy", cursive';
       for (const para of [T1, T2]) {
